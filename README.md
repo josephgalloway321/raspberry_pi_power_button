@@ -1,1 +1,3 @@
-# raspberry_pi_power_button
+# Raspberry Pi Power Button
+
+This purpose of this project is to ...
