@@ -1,0 +1,9 @@
+[Unit]
+Description = Add functionality to power button 
+After = multi-user.target
+
+[Service]
+ExecStart = /usr/bin/python3 /usr/local/bin/power_button.py
+
+[Install]
+WantedBy = multi-user.target
