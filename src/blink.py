@@ -2,7 +2,7 @@ import time
 import RPi.GPIO as GPIO
 
 # Pin definitions
-led_pin = 13
+led_pin = 19
 
 # Use "GPIO" pin numbering
 GPIO.setmode(GPIO.BCM)
