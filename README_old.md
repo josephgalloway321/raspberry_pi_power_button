@@ -68,3 +68,4 @@ The credit for all of the information in this project goes to the people who mad
 - [How to pass and use arguments in shell script](https://www.educative.io/answers/how-to-pass-and-use-arguments-in-shell-script)
 - [Running Programs Automatically on Your Tiny Computer](https://learn.adafruit.com/running-programs-automatically-on-your-tiny-computer)
 - [How to Make a Raspberry Pi Program Start on Boot (systemd)](https://www.youtube.com/watch?v=DUGZC-tNm2w)
+- [Install RPi.GPIO Python Library](https://www.raspberrypi-spy.co.uk/2012/05/install-rpi-gpio-python-library/)
