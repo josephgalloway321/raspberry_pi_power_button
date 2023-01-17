@@ -18,7 +18,9 @@
 # The $1 means the first argument sent to the script
 case "$1" in
 
-    # Start the power_button script
+    # When the Pi starts up, this case statement block will execute
+    # Another way to execute this block is with the following command:
+    # sudo /etc/init.d/power_button.sh start
     start)
         # Print to the command line that the program is starting
         echo "Starting power_button.py"
@@ -27,13 +29,16 @@ case "$1" in
         # Because our file runs indefinitely until the interrupt happens,
         # an ampersand is necessary at the end of the command
         # The ampersand (&) tells the Pi to continue running the power_button program
-        # as a separate process so it can continue running the other startup processes
+        # as a separate process (in the background) so it can continue 
+        # running the other startup processes
         /usr/local/bin/power_button.py &
 
         # The double semicolons (;;) represent the end of the body of the case
         ;;
 
-    # Stop the power_button script    
+    # This section will only execute if the following command is executed by the user 
+    # or another script:
+    # sudo /etc/init.d/power_button.sh stop   
     stop)
         echo "Stopping power_button.py"
         # pkill will kill the process 
@@ -43,7 +48,7 @@ case "$1" in
     # The asterisk (*) case is the default case
     # This is used in case something goes wrong and the above cases are not met
     *)
-        # Show the location of the file for debugging
+        # Print the location of the file for debugging to the command line
         echo "Usage: /etc/init.d/power_button.sh {start|stop}"
         # Show a general error code
         exit 1
