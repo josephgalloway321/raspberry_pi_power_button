@@ -14,17 +14,20 @@ GPIO.setup(blue_pin, GPIO.OUT)
 
 try:
     if (sys.argv[1] == 'red'):
-        GPIO.output(red_pin, GPIO.HIGH)
-        GPIO.output(green_pin, GPIO.LOW)
-        GPIO.output(blue_pin, GPIO.LOW)
+        while True:
+            GPIO.output(red_pin, GPIO.HIGH)
+            GPIO.output(green_pin, GPIO.LOW)
+            GPIO.output(blue_pin, GPIO.LOW)
     elif(sys.argv[1] == 'green'):
-        GPIO.output(red_pin, GPIO.LOW)
-        GPIO.output(green_pin, GPIO.HIGH)
-        GPIO.output(blue_pin, GPIO.LOW)
+        while True:
+            GPIO.output(red_pin, GPIO.LOW)
+            GPIO.output(green_pin, GPIO.HIGH)
+            GPIO.output(blue_pin, GPIO.LOW)
     elif(sys.argv[1] == 'blue'):
-        GPIO.output(red_pin, GPIO.LOW)
-        GPIO.output(green_pin, GPIO.LOW)
-        GPIO.output(blue_pin, GPIO.HIGH)
+        while True:
+            GPIO.output(red_pin, GPIO.LOW)
+            GPIO.output(green_pin, GPIO.LOW)
+            GPIO.output(blue_pin, GPIO.HIGH)
     else:
         print("Invalid argument")
 
