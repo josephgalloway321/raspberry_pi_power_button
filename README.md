@@ -66,3 +66,4 @@ The credit for all of the information in this project goes to the people who mad
 - [Shebang (Unix) Wiki](https://en.wikipedia.org/wiki/Shebang_(Unix))
 - [Bash Scripting – Case Statement](https://www.geeksforgeeks.org/bash-scripting-case-statement/)
 - [How to pass and use arguments in shell script](https://www.educative.io/answers/how-to-pass-and-use-arguments-in-shell-script)
+- [Running Programs Automatically on Your Tiny Computer](https://learn.adafruit.com/running-programs-automatically-on-your-tiny-computer)
