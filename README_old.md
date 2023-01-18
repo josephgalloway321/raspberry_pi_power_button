@@ -70,3 +70,6 @@ The credit for all of the information in this project goes to the people who mad
 - [How to Make a Raspberry Pi Program Start on Boot (systemd)](https://www.youtube.com/watch?v=DUGZC-tNm2w)
 - [Install RPi.GPIO Python Library](https://www.raspberrypi-spy.co.uk/2012/05/install-rpi-gpio-python-library/)
 - [How to Set Static IP in Ubuntu Server 22.04](https://www.youtube.com/watch?v=fayx4jWqyWk)
+- [Using Common Cathode and Common Anode RGB LED with Arduino](https://www.hackster.io/techmirtz/using-common-cathode-and-common-anode-rgb-led-with-arduino-7f3aa9)
+- [Current Sourcing and Sinking](https://startingelectronics.org/articles/current-sourcing-sinking/)
+- [New "gpio" config command](https://forums.raspberrypi.com/viewtopic.php?f=117&t=208748)
