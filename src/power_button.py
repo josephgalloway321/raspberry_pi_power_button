@@ -1,42 +1,36 @@
 #!/usr/bin/env python
 
-import RPi.GPIO as GPIO
-import subprocess
+from gpiozero import RGBLED, Button
+from subprocess import run
+from time import time
 
-button_pin = 3
-red_pin = 4
-green_pin = 5
-blue_pin = 6
-
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(button_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-GPIO.setup(red_pin, GPIO.OUT)
-GPIO.setup(green_pin, GPIO.OUT)
-GPIO.setup(blue_pin, GPIO.OUT)
-
-def redOn():
-    GPIO.output(red_pin, GPIO.LOW)
-    GPIO.output(green_pin, GPIO.HIGH)
-    GPIO.output(blue_pin, GPIO.HIGH)
-
-def greenOn():
-    GPIO.output(red_pin, GPIO.HIGH)
-    GPIO.output(green_pin, GPIO.LOW)
-    GPIO.output(blue_pin, GPIO.HIGH)
-
-def blueOn():
-    GPIO.output(red_pin, GPIO.HIGH)
-    GPIO.output(green_pin, GPIO.HIGH)
-    GPIO.output(blue_pin, GPIO.LOW)
-
-def shutdown():
-    redOn()
-    subprocess.run(['shutdown', '-h', 'now'])
-
+button = Button(3, pull_up=True, bounce_time=0.5)
+led = RGBLED(4, 5, 6)
+    
 def main():
-    GPIO.wait_for_edge(button_pin, GPIO.FALLING)
-    #TODO: Call shutdown process as callback when event happens
-    #TODO: Look into emailed link about debounce button 
+    # Turn on green to show the button is ready to be pushed
+    led.color = (1, 0, 1)
+    
+    # When the button is pressed, time how long it's held down
+    button.wait_for_press()
+    start_time = time()
+    button.wait_for_release()
+    end_time = time()
+    time_held = end_time - start_time
+    #print(str(time_held))
+    
+    # If button held down for more than two seconds, then
+    # restart Raspberry Pi
+    # Otherwise, shutdown Raspberry PI
+    if time_held > 1:
+        led.color = (0, 0.5, 1)    # Orange
+        print("Restarting...")
+        run(['reboot'])
+
+    else:
+        led.color = (0, 1, 1)    # Red
+        print("Shutting Down...")
+        run(['shutdown', '-h', 'now'])
 
 if __name__ == '__main__':
     main()

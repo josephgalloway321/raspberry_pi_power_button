@@ -73,4 +73,7 @@ The credit for all of the information in this project goes to the people who mad
 - [Using Common Cathode and Common Anode RGB LED with Arduino](https://www.hackster.io/techmirtz/using-common-cathode-and-common-anode-rgb-led-with-arduino-7f3aa9)
 - [Current Sourcing and Sinking](https://startingelectronics.org/articles/current-sourcing-sinking/)
 - [New "gpio" config command](https://forums.raspberrypi.com/viewtopic.php?f=117&t=208748)
-- []()
+- [raspberry-gpio-python Wiki](https://sourceforge.net/p/raspberry-gpio-python/wiki/Inputs/)
+- [gpiozero](https://gpiozero.readthedocs.io/en/stable/)
+- [API - Input Devices for gpiozero](https://gpiozero.readthedocs.io/en/stable/api_input.html)
+- [fire1ce](https://github.com/fire1ce/raspberry-pi-power-button/blob/main/power_button.py)
