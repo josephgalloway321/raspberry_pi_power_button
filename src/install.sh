@@ -6,7 +6,7 @@ sudo cp /boot/firmware/config.txt /boot/firmware/config_backup.txt
 # Append to the config.txt to make red pin output low during startup
 echo "gpio=4=op,dl" | sudo tee --append /boot/firmware/config.txt
 
-
+<<com
 # Make sure the required libraries are installed
 # Check if Python3 is installed
 if [ $(command -v python3) ]; then
@@ -24,6 +24,7 @@ else
     echo "GPIO Zero is not installed. Installing now..."
     sudo apt-get install python3-gpiozero
 fi
+com
 
 # Install Python and service scripts then place them in the correct folders
 # If there is no /usr/local/bin/ then create the directory

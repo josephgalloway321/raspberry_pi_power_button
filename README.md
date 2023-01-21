@@ -13,14 +13,20 @@ The
 ## Hardware
 The 
 
-
-## How It Works
-
-# First, please update your system using the following commands
+___
+## Install & Uninstall
+First, please update your system using the following commands
+This can take some time depending on how updated your system is currently
+Consider rebooting if the system recommends it
 sudo apt update && sudo apt upgrade
 
 In order to install the installation file, please install curl
 sudo apt-get install curl
+
+The program uses Python 3 and the GPIO Zero module
+Please run the next two commands to install both of them
+sudo apt-get install python3
+sudo apt-get install python3-gpiozero
 
 To Install: Please run the installation file
 curl https://raw.githubusercontent.com/josephgalloway321/raspberry_pi_power_button/main/src/install.sh | bash
@@ -28,10 +34,9 @@ curl https://raw.githubusercontent.com/josephgalloway321/raspberry_pi_power_butt
 To Uninstall: Please run the uninstallation file
 curl https://raw.githubusercontent.com/josephgalloway321/raspberry_pi_power_button/main/src/uninstall.sh | bash
 
-
+___
 ## Tested OS
 - Ubuntu Server 24.04 LTS (64-bit)
-- Ubuntu Desktop 24.04 LTS (64-bit)
 
 
 ## Acknowledgments
