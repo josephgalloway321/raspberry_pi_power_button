@@ -29,7 +29,6 @@ curl https://raw.githubusercontent.com/josephgalloway321/raspberry_pi_power_butt
 
 
 ## Tested OS
-- Raspberry Pi OS (32-bit)
 - Ubuntu Server 24.04 LTS (64-bit)
 
 ## Acknowledgments
