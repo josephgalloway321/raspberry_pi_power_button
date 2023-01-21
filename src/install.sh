@@ -57,5 +57,12 @@ sudo mv power_button.service /etc/systemd/system
 sudo systemctl start power_button.service
 sudo systemctl enable power_button.service
 
-echo "Installation complete. Please restart."
-# Provide option for restarting
+echo "Installation complete. Please restart your device."
+echo "Do you want to restart now? (y/n)"
+read answer
+if [ $answer == "Y" ] || [ $answer == "y" ]; then
+  echo "Restarting..."
+  reboot
+else
+  echo "Please restart at your earliest convenience."
+fi

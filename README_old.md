@@ -82,5 +82,7 @@ The credit for all of the information in this project goes to the people who mad
 - [ShellHacks](https://www.shellhacks.com/sudo-echo-to-file-permission-denied/)
 - [From the terminal verify if python 3 is installed](https://stackoverflow.com/questions/38485373/from-the-terminal-verify-if-python-3-is-installed)
 - [Redirection in Linux - Linux Tutorial 8](https://youtu.be/Bzd7XfApxLI)
-- [Meaning of "[: too many arguments" error from if [] (square brackets)](https://stackoverflow.com/questions/13781216/meaning-of-too-many-arguments-error-from-if-square-brackets)
+- [Stackoverflow help](https://stackoverflow.com/questions/13781216/meaning-of-too-many-arguments-error-from-if-square-brackets)
 - [How can I check if a package is installed and install it if not?](https://stackoverflow.com/questions/1298066/how-can-i-check-if-a-package-is-installed-and-install-it-if-not)
+- [FAQ gpio zero](https://gpiozero.readthedocs.io/en/stable/faq.html#gpio-cleanup)
+- [GPIO cleanup via terminal](https://raspberrypi.stackexchange.com/questions/37917/gpio-cleanup-via-terminal)
