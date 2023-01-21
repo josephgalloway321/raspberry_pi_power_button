@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 # Do not remove Python3 nor GPIO Zero
 
@@ -19,5 +19,9 @@ sudo rm /etc/systemd/system/power_button.service
 
 # Remove python script
 sudo rm /usr/local/bin/power_button.py
+
+# Run short script to clean GPIO pins used in this project then remove file
+sudo python3 /usr/local/bin/gpio_cleanup.py
+sudo rm /usr/local/bin/gpio_cleanup.py
 
 echo "Uninstallation complete."

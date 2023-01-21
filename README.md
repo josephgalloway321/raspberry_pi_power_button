@@ -18,8 +18,11 @@ The
 In order to install the installation file, please install curl
 sudo apt-get install curl
 
-Please run the installation file
+To Install: Please run the installation file
 curl https://raw.githubusercontent.com/josephgalloway321/raspberry_pi_power_button/main/src/install.sh | bash
+
+To Uninstall: Please run the uninstallation file
+curl https://raw.githubusercontent.com/josephgalloway321/raspberry_pi_power_button/main/src/uninstall.sh | bash
 
 
 ## Debugging

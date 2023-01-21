@@ -43,6 +43,12 @@ curl -O https://raw.githubusercontent.com/josephgalloway321/raspberry_pi_power_b
 sudo chmod +x power_button.py
 sudo mv power_button.py /usr/local/bin
 
+# Download the GPIO cleanup script (Used if user will uninstall in the future)
+# Then move to /usr/local/bin/
+curl -O https://raw.githubusercontent.com/josephgalloway321/raspberry_pi_power_button/main/src/gpio_cleanup.py
+sudo chmod +x gpio_cleanup.py
+sudo mv gpio_cleanup.py /usr/local/bin
+
 # Download then move service script to systemd folder
 curl -O https://raw.githubusercontent.com/josephgalloway321/raspberry_pi_power_button/main/src/power_button.service
 sudo mv power_button.service /etc/systemd/system
