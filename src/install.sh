@@ -20,6 +20,7 @@ if [ $(command -v python3) ]; then
 else
   echo "Python 3 is not installed. Installing now..."
   sudo apt-get install python3
+fi
 
 # Check if python3-gpiozero is installed
 PACKAGE_INSTALLED=$(dpkg-query -W --showformat='${Status}\n' "python3-gpiozero")
@@ -28,7 +29,7 @@ if [ "$PACKAGE_INSTALLED" == "install ok installed" ]; then
 else
   echo "GPIO Zero is not installed. Installing now..."
   sudo apt-get install python3-gpiozero
-
+fi
 
 # Install Python and service scripts then place them in the correct folders
 # If there is no /usr/local/bin/ then create the directory
@@ -51,3 +52,4 @@ sudo systemctl start power_button.service
 sudo systemctl enable power_button.service
 
 echo "Installation complete. Please restart."
+# Provide option for restarting
