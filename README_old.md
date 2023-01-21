@@ -76,4 +76,7 @@ The credit for all of the information in this project goes to the people who mad
 - [raspberry-gpio-python Wiki](https://sourceforge.net/p/raspberry-gpio-python/wiki/Inputs/)
 - [gpiozero](https://gpiozero.readthedocs.io/en/stable/)
 - [API - Input Devices for gpiozero](https://gpiozero.readthedocs.io/en/stable/api_input.html)
-- [fire1ce](https://github.com/fire1ce/raspberry-pi-power-button/blob/main/power_button.py)
+- [fire1ce](https://github.com/fire1ce/raspberry-pi-power-button) 
+- [Accessing config.txt](https://forums.raspberrypi.com/viewtopic.php?t=241485)
+- [Bash: Append to File](https://linuxize.com/post/bash-append-to-file/)
+- [ShellHacks](https://www.shellhacks.com/sudo-echo-to-file-permission-denied/)

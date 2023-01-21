@@ -13,19 +13,14 @@ The
 
 
 ## How It Works
-<!-- If this approach doesn't work, then just time the start up and shutdown -->
-- We want the LED to blink red during the start up process
-- We want the LED to be solid green AFTER the OS has finished loading and ready to use
-- We want the LED to blink green during the shutdown process
-- We want the LED to be solid red right before the OS has finished shutting down everything
+In order to install the installation file, please install curl
+sudo apt-get install curl
+
+Please run the installation file
+curl https://raw.githubusercontent.com/josephgalloway321/raspberry_pi_power_button/main/install.sh | bash
 
 
-## Step-by-Step
-The
-
-
-## Results
-The 
+## Debugging
 
 
 ## Acknowledgments
