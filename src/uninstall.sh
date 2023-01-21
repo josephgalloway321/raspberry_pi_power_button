@@ -2,11 +2,19 @@
 
 # Do not remove Python3 nor GPIO Zero
 
-# Delete the current config.txt (Modified during installation)
-sudo rm /boot/firmware/config.txt
-
-# Rename config_backup.txt to config.txt
-sudo mv /boot/firmware/config_backup.txt /boot/firmware/config.txt
+if [ -d "/boot/firmware" ]; then
+    # For Ubuntu 22.04 LTS uninstallation
+    # Delete the current config.txt (Modified during installation)
+    sudo rm /boot/firmware/config.txt
+    # Rename config_backup.txt to config.txt
+    sudo mv /boot/firmware/config_backup.txt /boot/firmware/config.txt
+else
+    # For Raspberry Pi OS uninstallation
+    # Delete the current config.txt (Modified during installation)
+    sudo rm /boot/config.txt
+    # Rename config_backup.txt to config.txt
+    sudo mv /boot/config_backup.txt /boot/firmware/config.txt
+fi
 
 # Prevent service from starting on reboot
 sudo systemctl disable power_button.service

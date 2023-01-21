@@ -87,3 +87,4 @@ The credit for all of the information in this project goes to the people who mad
 - [FAQ gpio zero](https://gpiozero.readthedocs.io/en/stable/faq.html#gpio-cleanup)
 - [GPIO cleanup via terminal](https://raspberrypi.stackexchange.com/questions/37917/gpio-cleanup-via-terminal)
 - [What is the state of the GPIO Pins during Boot Up?](https://forums.raspberrypi.com/viewtopic.php?t=335318#:~:text=All%20GPIO%20pins%20revert%20to,inputs%20on%20power%2Don%20reset.)
+- [How To Check If a Directory Exists In a Shell Script](https://www.cyberciti.biz/faq/howto-check-if-a-directory-exists-in-a-bash-shellscript/)

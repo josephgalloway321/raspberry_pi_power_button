@@ -3,27 +3,12 @@
 # Update everything
 sudo apt update && sudo apt upgrade
 
-# Ubuntu Server 22.04 LTS has the config.txt file in /boot/firmware
-# Raspberry Pi OS has the config.txt file in /boot
-# So... check if there's a firmware folder or not first
 
-if [ -d "/boot/firmware" ]; then
-    # For Ubuntu 22.04 LTS installation
-    # Make changes to the config.txt file so the red light turns on during startup
-    # First, create a backup for config.txt and name it config_backup.txt
-    sudo cp /boot/firmware/config.txt /boot/firmware/config_backup.txt
-
-    # Append to the config.txt to make red pin output low during startup
-    echo "gpio=4=op,dl" | sudo tee --append /boot/firmware/config.txt
-else 
-    # For Raspberry Pi OS installation
-    # Make changes to the config.txt file so the red light turns on during startup
-    # First, create a backup for config.txt and name it config_backup.txt
-    sudo cp /boot/config.txt /boot/config_backup.txt
-    
-    # Append to the config.txt to make red pin output low during startup
-    echo "gpio=4=op,dl" | sudo tee --append /boot/config.txt
-fi
+# Make changes to the config.txt file so the red light turns on during startup
+# First, create a backup for config.txt and name it config_backup.txt
+sudo cp /boot/firmware/config.txt /boot/firmware/config_backup.txt
+# Append to the config.txt to make red pin output low during startup
+echo "gpio=4=op,dl" | sudo tee --append /boot/firmware/config.txt
 
 
 # Make sure the required libraries are installed
@@ -56,7 +41,7 @@ curl -O https://raw.githubusercontent.com/josephgalloway321/raspberry_pi_power_b
 sudo chmod +x power_button.py
 sudo mv power_button.py /usr/local/bin
 
-# Download the GPIO cleanup script (Used if user will uninstall in the future)
+# Download the GPIO cleanup script (Used only if user will uninstall in the future)
 # Then move to /usr/local/bin/
 curl -O https://raw.githubusercontent.com/josephgalloway321/raspberry_pi_power_button/main/src/gpio_cleanup.py
 sudo chmod +x gpio_cleanup.py
@@ -64,9 +49,12 @@ sudo mv gpio_cleanup.py /usr/local/bin
 
 # Download then move service script to systemd folder
 curl -O https://raw.githubusercontent.com/josephgalloway321/raspberry_pi_power_button/main/src/power_button.service
+sudo chmod +x power_button.service
 sudo mv power_button.service /etc/systemd/system
 
-# Start service and enable so it starts on reboot 
+# Reload the services, start the service and 
+# enable service so it starts on reboot 
+sudo systemctl daemon-reload
 sudo systemctl start power_button.service
 sudo systemctl enable power_button.service
 
