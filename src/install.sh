@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Update everything
-sudo apt update && sudo apt updgrade
+sudo apt update && sudo apt upgrade
 
 
 # Make changes to the config.txt file so the red light turns on during startup
@@ -10,7 +10,7 @@ sudo cp /boot/firmware/config.txt /boot/firmware/config_backup.txt
 
 # Append to the config.txt to make red pin output low during startup
 echo "gpio=4=op,dl" | sudo tee --append /boot/firmware/config.txt
-echo " was appended to the /boot/firmware/config.txt file"
+#echo " was appended to the /boot/firmware/config.txt file"
 
 
 # Make sure the required libraries are installed

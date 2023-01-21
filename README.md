@@ -19,7 +19,7 @@ In order to install the installation file, please install curl
 sudo apt-get install curl
 
 Please run the installation file
-curl https://raw.githubusercontent.com/josephgalloway321/raspberry_pi_power_button/main/install.sh | bash
+curl https://raw.githubusercontent.com/josephgalloway321/raspberry_pi_power_button/main/src/install.sh | bash
 
 
 ## Debugging
