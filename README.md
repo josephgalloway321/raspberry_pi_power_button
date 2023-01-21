@@ -1,5 +1,7 @@
 # Raspberry Pi Power Button
 
+Currently testing...
+<!--
 ## Overview
 The
 
@@ -23,8 +25,13 @@ curl https://raw.githubusercontent.com/josephgalloway321/raspberry_pi_power_butt
 ## Debugging
 
 
+## Tested OS
+- Raspberry Pi OS (32-bit)
+- Ubuntu Server 24.04 LTS (64-bit)
+
 ## Acknowledgments
 The credit for all of the information in this project goes to the people who made the content in the resources section below. They were all excellent resources and guides for this project. I'm very grateful and could not have done it without their help.
 
 
 ## Resources
+-->
