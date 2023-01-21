@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# Update everything
-sudo apt update && sudo apt upgrade
-
-
 # Make changes to the config.txt file so the red light turns on during startup
 # First, create a backup for config.txt and name it config_backup.txt
 sudo cp /boot/firmware/config.txt /boot/firmware/config_backup.txt
