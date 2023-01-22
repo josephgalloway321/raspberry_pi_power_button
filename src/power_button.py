@@ -23,7 +23,7 @@ def main():
     # restart Raspberry Pi
     # Otherwise, shutdown Raspberry PI
     if time_held > 1:
-        led.color = (0, 0.5, 1)    # Orange
+        led.color = (0, 0, 1)    # Yellow
         print("Restarting...")
         run(['reboot'])
 
