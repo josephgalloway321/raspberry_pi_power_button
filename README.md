@@ -24,9 +24,11 @@ To use this program, please recreate the [circuit](#circuit) using the [hardware
 
 <br>
 
+<p float="left">
 <img src="gifs/start_up.gif" width="186" height="200" />
 <img src="gifs/shutdown.gif" width="186" height="200" />
 <img src="gifs/restart.gif" width="186" height="200" />
+</p>
 
 ___
 ## Table of Contents
