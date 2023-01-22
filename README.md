@@ -1,5 +1,5 @@
-# Raspberry Pi Power Button 
-:joy:
+# Raspberry Pi Power Button :red_circle:
+
 ## Overview
 The main goal of this project is to have an easy way to safely power on and power off the raspberry pi with a physical button. The button used in this project has an RGB LED to show the current state of the Raspberry Pi to the user. This project has only been tested using **Ubuntu Server 22.04 LTS (64-bit)** and the hardware specified in the [hardware](#hardware) section.
 
@@ -27,6 +27,7 @@ ___
 - [Hardware](#hardware)
 - [Circuit](#circuit)
 - [Install & Uninstall](#install--uninstall)
+- [Demonstration](#demonstration)
 - [Final Thoughts](#final-thoughts)
 - [Acknowledgments](#acknowledgments)
 - [Resources](#resources)
@@ -123,6 +124,13 @@ To Uninstall, please run the uninstallation file:
 ```bash
 curl https://raw.githubusercontent.com/josephgalloway321/raspberry_pi_power_button/main/src/uninstall.sh | bash
 ```
+
+___
+## Demonstration
+The following are sped up videos of how the operating system should behave depending on how the button is pressed.
+![A](videos/start_up_final.mp4)
+![](videos/shutdown_final.mp4)
+![](videos/restart_final.mp4)
 
 ___
 ## Final Thoughts
