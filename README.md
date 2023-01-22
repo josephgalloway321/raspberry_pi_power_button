@@ -65,24 +65,14 @@ ___
 Notes: 
 - The LED in the power button is a common anode RGB. This means that the three LEDs share a positive connection.   
 - From the LED Power Button, the wire going to GPIO 3 and the wire going to ground (GND) are both for the button. They need to be connected to the normally open (NO) spade connectors on the button, which are the two outermost connectors. A drawing can be found [here](https://cdn-shop.adafruit.com/product-files/3423/C5325+datasheet+PM221-11E-42RGB-12V-S.pdf) or on the [LED Power Button](https://www.adafruit.com/product/3423) product webpage.   
+
 <br>
+
 ![Circuit](images/rpi.jpg)
-
-<p align="center">
-  <img src="images/circuit.png" />
-</p>    
-
-<p align="center">
-  <img src="images/led_button_complete.jpg" />
-</p>
-
-<p align="center">
-  <img src="images/rpi_complete.jpg" />
-</p>
-
-<p align="center">
-  <img src="images/circuit_complete.jpg" />
-</p>
+![Circuit](images/circuit.png)
+![Circuit](images/led_button_complete.jpg)
+![Circuit](images/rpi_complete.jpg)
+![Circuit](images/circuit_complete.jpg)
 
 ___
 ## Install & Uninstall
