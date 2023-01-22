@@ -178,7 +178,7 @@ ___
 - [Using Markdown for Formatting Content](https://docs.bugcrowd.com/customers/submission-management/using-markdown-for-formatting-content/)
 - [How do I center an image in the README.md file on GitHub?](https://stackoverflow.com/questions/12090472/how-do-i-center-an-image-in-the-readme-md-file-on-github)
 - [Is there a way to add a gif to a Markdown file?](https://stackoverflow.com/questions/34341808/is-there-a-way-to-add-a-gif-to-a-markdown-file)
-- [https://www.youtube.com/watch?v=ndORMSnb2nw](What are GitHub Licenses? | How To Add a License? | Why You Should Use a License?)
+- [What are GitHub Licenses? How To Add a License? Why You Should Use a License?](https://www.youtube.com/watch?v=ndORMSnb2nw)
 
 
 ## License
