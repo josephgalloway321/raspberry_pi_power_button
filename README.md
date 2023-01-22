@@ -39,6 +39,7 @@ ___
 - [Final Thoughts](#final-thoughts)
 - [Acknowledgments](#acknowledgments)
 - [Resources](#resources)
+- [License](#license)
 
 ___
 ## Hardware
