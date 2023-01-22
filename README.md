@@ -1,5 +1,7 @@
 # Raspberry Pi Power Button :red_circle:
 
+
+
 ## Overview
 The main goal of this project is to have an easy way to safely power on and power off the raspberry pi with a physical button. The button used in this project has an RGB LED to show the current state of the Raspberry Pi to the user. This project has only been tested using **Ubuntu Server 22.04 LTS (64-bit)** and the hardware specified in the [hardware](#hardware) section.
 
@@ -8,6 +10,7 @@ To use this program, please recreate the [circuit](#circuit) using the [hardware
 
 | Color | Process |
 | :-: | :-: |
+| No Color | Operating System Off |
 | Red | Operating System Starting Up |
 | Green | Start Up Complete; Button Ready to Use |
 | Yellow | Operating System Restarting |
@@ -19,8 +22,11 @@ To use this program, please recreate the [circuit](#circuit) using the [hardware
 | Button Press & Release (< 1 seconds) | Shutdown |
 | Button Press & Release (> 1 seconds) | Restart |
 
+<br>
 
-<!-- Include gif here -->
+<img src="gifs/start_up.gif" width="186" height="200" />
+<img src="gifs/shutdown.gif" width="186" height="200" />
+<img src="gifs/restart.gif" width="186" height="200" />
 
 ___
 ## Table of Contents
@@ -58,22 +64,22 @@ Notes:
 - The LED in the power button is a common anode RGB. This means that the three LEDs share a positive connection.   
 - From the LED Power Button, the wire going to GPIO 3 and the wire going to ground (GND) are both for the button. They need to be connected to the normally open (NO) spade connectors on the button, which are the two outermost connectors. A drawing can be found [here](https://cdn-shop.adafruit.com/product-files/3423/C5325+datasheet+PM221-11E-42RGB-12V-S.pdf) or on the [LED Power Button](https://www.adafruit.com/product/3423) product webpage.   
 <br>
-![Circuit](images_gifs/rpi.jpg)
+![Circuit](images/rpi.jpg)
 
 <p align="center">
-  <img src="images_gifs/circuit.png" />
+  <img src="images/circuit.png" />
 </p>    
 
 <p align="center">
-  <img src="images_gifs/led_button_complete.jpg" />
+  <img src="images/led_button_complete.jpg" />
 </p>
 
 <p align="center">
-  <img src="images_gifs/rpi_complete.jpg" />
+  <img src="images/rpi_complete.jpg" />
 </p>
 
 <p align="center">
-  <img src="images_gifs/circuit_complete.jpg" />
+  <img src="images/circuit_complete.jpg" />
 </p>
 
 ___
@@ -127,10 +133,7 @@ curl https://raw.githubusercontent.com/josephgalloway321/raspberry_pi_power_butt
 
 ___
 ## Demonstration
-The following are sped up videos of how the operating system should behave depending on how the button is pressed.
-![A](videos/start_up_final.mp4)
-![](videos/shutdown_final.mp4)
-![](videos/restart_final.mp4)
+There are three demonstration videos of how the operating system should behave depending on how the button is pressed. The start up and restart videos are sped up, but each should take around two minutes total for each process. The shutdown video is in real time. Please download and watch each video found in the [videos](https://github.com/josephgalloway321/raspberry_pi_power_button/tree/main/videos) folder.
 
 ___
 ## Final Thoughts
@@ -145,5 +148,49 @@ The credit for all of the information in this project goes to the people who mad
 ___
 ## Resources
 - [Raspberry Pi 3B+ Image Source](https://www.etechnophiles.com/raspberry-pi-3-b-pinout-with-gpio-functions-schematic-and-specs-in-detail/)
+- [How to Add a Power Button to Your Raspberry Pi](https://howchoo.com/g/mwnlytk3zmm/how-to-add-a-power-button-to-your-raspberry-pi?utm_source=youtube&utm_medium=referral&utm_campaign=power-button-video&utm_content=description)
+- [Run a Program On Your Raspberry Pi At Startup](https://www.dexterindustries.com/howto/run-a-program-on-your-raspberry-pi-at-startup/#:~:text=d%20directory,shutdown%20or%20reboot%20the%20system)
+- [How to Run a Bash Script on Startup!!](https://www.youtube.com/watch?v=jcE8U1lG514)
+- [Python Tutorial: Calling External Commands Using the Subprocess Module](https://youtu.be/2Fp1N6dof0Y)
+- [Python (RPi.GPIO) API](https://learn.sparkfun.com/tutorials/raspberry-gpio/python-rpigpio-api)
+- [Python Subprocess Documentation](https://docs.python.org/3/library/subprocess.html#subprocess.call)
+- [Python Wait For Edge Function Documentation](https://sourceforge.net/p/raspberry-gpio-python/wiki/Inputs/)
+- [Demystifying Linux: The purpose of /bin, /usr/bin and /usr/local/bin](https://dev.to/kcdchennai/demystifying-linux-the-purpose-of-bin-usrbin-and-usrlocalbin-5a8e#:~:text=What%20about%20%2Fusr%2Flocal%2F,the%20binaries%20for%20root%20users.)
+- [How to make a file executable in linux?](https://medium.com/@peey/how-to-make-a-file-executable-in-linux-99f2070306b5#:~:text=What%20exactly%20happens%20when%20we,those%20commands%20into%20the%20shell.)
+- [Shebang (Unix) Wiki](https://en.wikipedia.org/wiki/Shebang_(Unix))
+- [Bash Scripting – Case Statement](https://www.geeksforgeeks.org/bash-scripting-case-statement/)
+- [How to pass and use arguments in shell script](https://www.educative.io/answers/how-to-pass-and-use-arguments-in-shell-script)
+- [Running Programs Automatically on Your Tiny Computer](https://learn.adafruit.com/running-programs-automatically-on-your-tiny-computer)
+- [How to Make a Raspberry Pi Program Start on Boot (systemd)](https://www.youtube.com/watch?v=DUGZC-tNm2w)
+- [Install RPi.GPIO Python Library](https://www.raspberrypi-spy.co.uk/2012/05/install-rpi-gpio-python-library/)
+- [How to Set Static IP in Ubuntu Server 22.04](https://www.youtube.com/watch?v=fayx4jWqyWk)
+- [Using Common Cathode and Common Anode RGB LED with Arduino](https://www.hackster.io/techmirtz/using-common-cathode-and-common-anode-rgb-led-with-arduino-7f3aa9)
+- [Current Sourcing and Sinking](https://startingelectronics.org/articles/current-sourcing-sinking/)
+- [New "gpio" config command](https://forums.raspberrypi.com/viewtopic.php?f=117&t=208748)
+- [raspberry-gpio-python Wiki](https://sourceforge.net/p/raspberry-gpio-python/wiki/Inputs/)
+- [gpiozero](https://gpiozero.readthedocs.io/en/stable/)
+- [API - Input Devices for gpiozero](https://gpiozero.readthedocs.io/en/stable/api_input.html)
+- [fire1ce version](https://github.com/fire1ce/raspberry-pi-power-button) 
+- [Accessing config.txt](https://forums.raspberrypi.com/viewtopic.php?t=241485)
+- [Bash: Append to File](https://linuxize.com/post/bash-append-to-file/)
+- [ShellHacks](https://www.shellhacks.com/sudo-echo-to-file-permission-denied/)
+- [From the terminal verify if python 3 is installed](https://stackoverflow.com/questions/38485373/from-the-terminal-verify-if-python-3-is-installed)
+- [Redirection in Linux - Linux Tutorial 8](https://youtu.be/Bzd7XfApxLI)
+- [Stackoverflow help](https://stackoverflow.com/questions/13781216/meaning-of-too-many-arguments-error-from-if-square-brackets)
+- [How can I check if a package is installed and install it if not?](https://stackoverflow.com/questions/1298066/how-can-i-check-if-a-package-is-installed-and-install-it-if-not)
+- [FAQ gpio zero](https://gpiozero.readthedocs.io/en/stable/faq.html#gpio-cleanup)
+- [GPIO cleanup via terminal](https://raspberrypi.stackexchange.com/questions/37917/gpio-cleanup-via-terminal)
+- [What is the state of the GPIO Pins during Boot Up?](https://forums.raspberrypi.com/viewtopic.php?t=335318#:~:text=All%20GPIO%20pins%20revert%20to,inputs%20on%20power%2Don%20reset.)
+- [How To Check If a Directory Exists In a Shell Script](https://www.cyberciti.biz/faq/howto-check-if-a-directory-exists-in-a-bash-shellscript/)
+- [Using Markdown for Formatting Content](https://docs.bugcrowd.com/customers/submission-management/using-markdown-for-formatting-content/)
+- [How do I center an image in the README.md file on GitHub?](https://stackoverflow.com/questions/12090472/how-do-i-center-an-image-in-the-readme-md-file-on-github)
+- [Is there a way to add a gif to a Markdown file?](https://stackoverflow.com/questions/34341808/is-there-a-way-to-add-a-gif-to-a-markdown-file)
+- [https://www.youtube.com/watch?v=ndORMSnb2nw](What are GitHub Licenses? | How To Add a License? | Why You Should Use a License?)
+
+
+## License
+[MIT License]()
+
+<br>
 
 [Top of the page](#raspberry-pi-power-button)
