@@ -33,7 +33,7 @@ To use this program, please recreate the [circuit](#circuit) using the [hardware
 ___
 ## Table of Contents
 - [Hardware](#hardware)
-- [Circuit](#circuit)
+- [Circuit & Setup](#circuit--setup)
 - [Install & Uninstall](#install--uninstall)
 - [Demonstration](#demonstration)
 - [Final Thoughts](#final-thoughts)
